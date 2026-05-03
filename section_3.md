@@ -1,14 +1,10 @@
-    from layouts import Nav
-    Nav(words = ['pubmed', 'embase', 'web of science'])
-
-    {"model_id":"523f3ea49c9147d998897955ea46dbb7","version_major":2,"version_minor":0}
-
-    {"model_id":"c412a13eb2284195bcd19cfc8898b3e5","version_major":2,"version_minor":0}
-
 <a id="search"></a>
 
 <h2 align="center" style="font-family:Times New Roman;font-variant:small-caps;">Search</h2>
 
+Import the neccessary modules
+
+```python
     import subprocess
     import sys
     import os
@@ -17,12 +13,20 @@
     import certifi
     import re
     from pathlib import Path
+```
 
+Create a secure connection to through the Johns Hopkins VPN channel.
+
+
+```python
     ssl._create_default_https_context = lambda: ssl.create_default_context(
         cafile=certifi.where()
     )
+```
 
-    # create search strategy using structured inputs
+Create search strategy using structured inputs
+
+```python
 
     question = input("Do you already have a search strategy file saved?") # get rid of this
     filename = input("Enter the file name of the search strategy: ") # use file upload widget ! and present the results as data table widgets !!! 
@@ -145,20 +149,4 @@
     num = len(df)
     print(f"Number of records found: {num}")
     data.info()
-
-    Do you already have a search strategy file saved? 
-    Enter the file name of the search strategy:  
-
-    ---------------------------------------------------------------------------
-    NameError                                 Traceback (most recent call last)
-    Cell In[17], line 9
-          5 # create search strategy using structured inputs
-          6 
-          7 question = input("Do you already have a search strategy file saved?") # get rid of this
-          8 filename = input("Enter the file name of the search strategy: ") # use file upload widget ! and present the results as data table widgets !!!
-    ----> 9 file = f"{search_strategy}/pubmed/{filename}.txt"
-         10 
-         11 if question == "no":
-         12     parts = []
-
-    NameError: name 'search_strategy' is not defined
+```
