@@ -1,4 +1,4 @@
-[previous](#search) | [top](#toc) | [next](#screening)  
+[previous](#search) | [top](#toc) | [next](#screening)   
 [search strategy](#search-strategy) | [search](#search) |
 [deduplication](#deduplication) | [screening](#screening)
 
