@@ -54,7 +54,7 @@
 
 **Table of Contents**
 
-- [Systematic Review](./1.0_systematic_review.ipynb)
-- [Data Collection](./2.0_data_collection.ipynb)
-- [Meta-Analysis](./3.0_meta_analysis.ipynb)
-- [Manuscript](./4.0_manuscript)
+- [Systematic Review](./chapter_1.md)
+- [Data Collection](./chapter_2.md)
+- [Meta-Analysis](./chapter_3.md)
+- [Manuscript](./chapter_4.md)
