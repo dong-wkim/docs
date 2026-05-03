@@ -25,6 +25,7 @@ input file(s): `records.csv`, output file(s): `doi_deduplicated.csv`,
 `pmid_deduplicated.csv`, `title+author+year_deduplicated.csv`, and
 `title+year_deduplicated.csv`.
 
+```python
     import pandas as pd
     import mermaid
     import os
@@ -107,17 +108,5 @@ input file(s): `records.csv`, output file(s): `doi_deduplicated.csv`,
     !mmdc -i "{prisma_file_name}" -o "{output_file}"_light.svg
     !mmdc -i "{prisma_file_name}" -o "{output_file}"_dark.svg -t dark -b transparent
     print(results)
+```
 
-    ---------------------------------------------------------------------------
-    NameError                                 Traceback (most recent call last)
-    Cell In[1], line 5
-          1 import pandas as pd
-          2 import mermaid
-          3 import os
-          4 
-    ----> 5 input_file_name = f"{root}/systematic_review/deduplication/records.csv"
-          6 
-          7 #input_file_name = f"{deduplication}/" + input('Enter file name: ') + '.csv'
-          8 
-
-    NameError: name 'root' is not defined
